@@ -1,0 +1,8 @@
+C:\Users\avita\Desktop\C#\Assignment_\bin\Debug\Assignment_.exe.config
+C:\Users\avita\Desktop\C#\Assignment_\bin\Debug\Assignment_.exe
+C:\Users\avita\Desktop\C#\Assignment_\bin\Debug\Assignment_.pdb
+C:\Users\avita\Desktop\C#\Assignment_\obj\Debug\Assignment_.csproj.AssemblyReference.cache
+C:\Users\avita\Desktop\C#\Assignment_\obj\Debug\Assignment_.csproj.SuggestedBindingRedirects.cache
+C:\Users\avita\Desktop\C#\Assignment_\obj\Debug\Assignment_.csproj.CoreCompileInputs.cache
+C:\Users\avita\Desktop\C#\Assignment_\obj\Debug\Assignment_.exe
+C:\Users\avita\Desktop\C#\Assignment_\obj\Debug\Assignment_.pdb
