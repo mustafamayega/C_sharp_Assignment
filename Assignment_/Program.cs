@@ -1,74 +1,74 @@
-﻿using System;
+using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment_
 {
-  
-    internal class Program
+   
+
+    public delegate String StudentDetails(String name);
+    public delegate int StudentId(int id);
+    class Student_Details
     {
-       
-
-
+        String Adress;
         static void Main(string[] args)
         {
-            student st = new student();
-            st.getStudentName(StudentDetails);
+            String Name = "MAYEGA MUSTAFA";
+            int ID = 776003035;
+            string studentID = ID.ToString();
 
-            studentId dt = new studentId();
-            dt.getStudentID(StudentDetail);
+            StudentDetails objStudentDetails = new StudentDetails(getStudentName);
+            StudentId objstudentId = new StudentId(student_Id);
+            Console.WriteLine("Student's Name:\t\t" + objStudentDetails(Name));
+            Console.WriteLine("Student's identity number:\t" + objstudentId(ID));
+
+            Student_Details objstd = new Student_Details();
+            objstd.StudentAddress = "ENTEBBE";
+
+            Console.WriteLine("Student's Address or location is:\t" + objstd.StudentAddress);
 
 
-            studentAddres adrs = new studentAddres();
-            adrs.getStudentaddress(StudentAddress);
+
+            Dictionary<string, string> objdctnry = new System.Collections.Generic.Dictionary<string, string>();
+            objdctnry.Add("Student's ID:\t\t", studentID);
+            objdctnry.Add("Student's Name:\t\t", Name);
+            objdctnry.Add("Student's Address:\t\t", objstd.StudentAddress);
+            Console.WriteLine();
+            ICollection objcollection = objdctnry.Keys;
+            foreach (String a in objcollection)
+            {
+                Console.WriteLine(a + "\t" + objdctnry[a]);
+               // Console.WriteLine(a + "\n\t\tthis is my work thank your\n mayegamustafa");
+                
+            }
+
+            Console.Beep();
+            Console.Beep();
+            Console.Beep();
+            Console.ReadKey();
 
         }
-        static void StudentDetails(string name)
+        public static String getStudentName(String studName)
         {
-            Console.WriteLine("\t"+name);
-          //  Console.WriteLine(ID);
+            return studName;
         }
-        static void StudentDetail(int ID)
+        public static int student_Id(int id)
         {
-          
-           Console.WriteLine("\t"+ID);
+            return id;
         }
+        
 
-        static void StudentAddress(string address)
+        public String StudentAddress
         {
+            get
+            {
+                return Adress;
+            }
 
-            Console.WriteLine("\t" + address);
-        }
-    }
-
-
-    class student
-    {
-        public delegate void StudentDetails(string name);
-        public void getStudentName(StudentDetails st)
-        {
-           
-            Console.WriteLine("Students name is \t"+"Mayega Mustafa" );
-        }
-    }
-
-    class studentId
-    {
-        public delegate void StudentDetail(int ID);
-        public void getStudentID(StudentDetail id)
-        {
-            Console.WriteLine("Students ID is \t" + 200);
-        }
-    }
-
-    class studentAddres
-    {
-        public delegate void StudentAddress(string address);
-        public void getStudentaddress(StudentAddress Adress)
-        {
-            Console.WriteLine("Students Location is \t" + "Entebbe");
+            set
+            {
+                Adress = value;
+            }
         }
     }
 }
